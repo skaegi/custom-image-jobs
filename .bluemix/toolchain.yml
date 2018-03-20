@@ -12,8 +12,6 @@ services:
   build:
     service_id: pipeline
     parameters:
-      services:
-        - sample-repo
       name: custom-image-jobs
       ui-pipeline: true
       configuration:
