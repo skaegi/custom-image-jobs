@@ -2,10 +2,7 @@ version: '2'
 
 template:
   name: "custom-image-jobs"
-    
   description: template for custom image jobs
-  header: '![](toolchain.svg?localize)'
-
   info:
     git url: >-
       [https://github.com/skaegi/custom-image-jobs](https://github.com/skaegi/custom-image-jobs)
