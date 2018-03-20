@@ -1,25 +1,22 @@
 ---
 stages:
-- name: cust
+- name: custom-image-jobs
   jobs:
   - name: Build
     type: builder
     artifact_dir: ''
-    build_type: customImage
+    build_type: customimage
     script: ls -al build
     docker_image: alpine
   - name: Test
     type: tester
-    script: cat /etc/os-release
+    script: ls -al test
+    test_type: customimage
     docker_image: alpine
   - name: Deploy
     type: deployer
     deploy_permission: DEV_IN_SPACE
-    deploy_type: customImage
+    deploy_type: customimage
     script: ls -al deploy
     docker_image: alpine
-hooks:
-- enabled: true
-  label: null
-  ssl_enabled: false
-  url: https://devops-api.ng.bluemix.net/v1/messaging/webhook/publish
+    
